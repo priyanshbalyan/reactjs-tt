@@ -10,7 +10,9 @@ COPY . .
 
 # RUN cd backend && npm install
 
-RUN cd client && npm install && npm run build
+RUN cd client && npm install
+
+RUN cd client && npm run build
 
 EXPOSE 8080
 
