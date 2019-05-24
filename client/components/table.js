@@ -5,10 +5,10 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
-class TablePane extends Component{
+const TablePane = (props) =>{
 
-    render(){
-        const rows = this.props.rows;
+    
+        const rows = props.rows;
 
         return (
             <Table>
@@ -28,7 +28,7 @@ class TablePane extends Component{
                 </TableBody>
             </Table>
         );
-    }
+    
 }
 
 export default TablePane;

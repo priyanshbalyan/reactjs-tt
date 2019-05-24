@@ -1,21 +1,35 @@
 {
-  "name": "priyansh-balyan-react-mongodb-nodejs",
+  "name": "priyansh-balyan-nextjs-reacthooks",
   "version": "1.0.0",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "install": "cd client && npm install && npm run build",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+    "install": "cd client && next build && next export",
+    "backend": "nodemon server.js",
+    "client": "cd client && npm run dev",
+    "export": "cd client && next build && next export",
+    "heroku-postbuild": "cd client && next build && next export"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
+    "@zeit/next-css": "^1.0.1",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "express": "^4.16.4",
-    "request": "^2.88.0"
+    "morgan": "^1.9.1",
+    "next": "8.1.0",
+    "nodemon": "^1.19.0",
+    "polished": "^3.3.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-particles-js": "^2.6.0",
+    "request": "^2.88.0",
+    "striptags": "^3.1.1"
   },
   "proxy": "http://localhost:3001"
 }
