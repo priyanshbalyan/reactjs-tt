@@ -12,8 +12,6 @@ COPY . .
 
 RUN cd client && npm install
 
-RUN cd client && npm run build
-
 EXPOSE 8080
 
 CMD ["npm", "start"]

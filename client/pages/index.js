@@ -18,14 +18,14 @@ const Home = (props) => {
 
   function searchTerm(){
     setLoading(true); setRows([]);
-    axios.post('http://localhost:3001/?url='+encodeURIComponent(url)+'&q='+search).then(resp=>{
+    axios.post('/?url='+encodeURIComponent(url)+'&q='+search).then(resp=>{
         // console.log(resp.data)
         setLoading(false); setRows(resp.data.data);
     }).catch(err=>{
         console.log(err);
         setLoading(false);
     });
-    
+
   }
 
   function handleKeys(e){
